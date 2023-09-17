@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.example.AppTest" time="0.03" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.example.AppTest" time="0.033" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.class.path" value="C:\ies\ies2024\lab01weather\target\test-classes;C:\ies\ies2024\lab01weather\target\classes;C:\Users\jfern\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\jfern\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\jfern\.m2\repository\com\squareup\retrofit2\retrofit\2.3.0\retrofit-2.3.0.jar;C:\Users\jfern\.m2\repository\com\squareup\okhttp3\okhttp\3.8.0\okhttp-3.8.0.jar;C:\Users\jfern\.m2\repository\com\squareup\okio\okio\1.13.0\okio-1.13.0.jar;C:\Users\jfern\.m2\repository\com\squareup\retrofit2\converter-gson\2.3.0\converter-gson-2.3.0.jar;C:\Users\jfern\.m2\repository\com\google\code\gson\gson\2.7\gson-2.7.jar;"/>
+    <property name="java.class.path" value="C:\ies\ies2024\lab01weather\target\test-classes;C:\ies\ies2024\lab01weather\target\classes;C:\Users\jfern\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\jfern\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\jfern\.m2\repository\com\squareup\retrofit2\retrofit\2.6.0\retrofit-2.6.0.jar;C:\Users\jfern\.m2\repository\com\squareup\okhttp3\okhttp\3.12.0\okhttp-3.12.0.jar;C:\Users\jfern\.m2\repository\com\squareup\okio\okio\1.15.0\okio-1.15.0.jar;C:\Users\jfern\.m2\repository\com\squareup\retrofit2\converter-gson\2.6.0\converter-gson-2.6.0.jar;C:\Users\jfern\.m2\repository\com\google\code\gson\gson\2.8.5\gson-2.8.5.jar;"/>
     <property name="java.vm.vendor" value="Microsoft"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -15,9 +15,9 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="GB"/>
     <property name="sun.boot.library.path" value="C:\bin\jdk-17.0.5.8-hotspot\bin"/>
-    <property name="sun.java.command" value="C:\Users\jfern\AppData\Local\Temp\surefire11333589808995303293\surefirebooter3205038303460201744.jar C:\Users\jfern\AppData\Local\Temp\surefire11333589808995303293 2023-09-17T21-48-37_347-jvmRun1 surefire11629886304565713477tmp surefire_02499098876592121884tmp"/>
+    <property name="sun.java.command" value="C:\Users\jfern\AppData\Local\Temp\surefire6188119098544199287\surefirebooter4968608251873911293.jar C:\Users\jfern\AppData\Local\Temp\surefire6188119098544199287 2023-09-17T22-36-02_199-jvmRun1 surefire5716772595999481688tmp surefire_09879810971299286935tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="C:\ies\ies2024\lab01weather\target\test-classes;C:\ies\ies2024\lab01weather\target\classes;C:\Users\jfern\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\jfern\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\jfern\.m2\repository\com\squareup\retrofit2\retrofit\2.3.0\retrofit-2.3.0.jar;C:\Users\jfern\.m2\repository\com\squareup\okhttp3\okhttp\3.8.0\okhttp-3.8.0.jar;C:\Users\jfern\.m2\repository\com\squareup\okio\okio\1.13.0\okio-1.13.0.jar;C:\Users\jfern\.m2\repository\com\squareup\retrofit2\converter-gson\2.3.0\converter-gson-2.3.0.jar;C:\Users\jfern\.m2\repository\com\google\code\gson\gson\2.7\gson-2.7.jar;"/>
+    <property name="surefire.test.class.path" value="C:\ies\ies2024\lab01weather\target\test-classes;C:\ies\ies2024\lab01weather\target\classes;C:\Users\jfern\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\jfern\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\jfern\.m2\repository\com\squareup\retrofit2\retrofit\2.6.0\retrofit-2.6.0.jar;C:\Users\jfern\.m2\repository\com\squareup\okhttp3\okhttp\3.12.0\okhttp-3.12.0.jar;C:\Users\jfern\.m2\repository\com\squareup\okio\okio\1.15.0\okio-1.15.0.jar;C:\Users\jfern\.m2\repository\com\squareup\retrofit2\converter-gson\2.6.0\converter-gson-2.6.0.jar;C:\Users\jfern\.m2\repository\com\google\code\gson\gson\2.8.5\gson-2.8.5.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\jfern"/>
     <property name="user.language" value="en"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\jfern\AppData\Local\Temp\surefire11333589808995303293\surefirebooter3205038303460201744.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\jfern\AppData\Local\Temp\surefire6188119098544199287\surefirebooter4968608251873911293.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.5+8-LTS"/>

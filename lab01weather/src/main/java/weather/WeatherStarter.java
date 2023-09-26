@@ -1,5 +1,14 @@
 package weather;
 
+// jfernan -- added log4j 
+// https://www.dataset.com/blog/maven-log4j2-project/
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+//-------------------
+
+import com.example.App;
+
 import retrofit2.Call;
 import retrofit2.Response;
 import retrofit2.Retrofit;
@@ -14,11 +23,17 @@ import weather.ipma_client.IpmaService;
  */
 public class WeatherStarter {
 
+ // jfernan log4j
+  private static final Logger logger = LogManager.getLogger(WeatherStarter.class);
+
+
+
     //todo: should generalize for a city passed as argument
     private static final int CITY_ID_AVEIRO = 1010500;
 
     public static void  main(String[] args ) {
 
+        logger.info("starting...");
         // get a retrofit instance, loaded with the GSon lib to convert JSON into objects
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("http://api.ipma.pt/open-data/")
@@ -46,6 +61,6 @@ public class WeatherStarter {
         } catch (Exception ex) {
             ex.printStackTrace();
         }
-
+        logger.info("ending...");
     }
 }

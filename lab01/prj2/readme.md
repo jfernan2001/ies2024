@@ -1,8 +1,8 @@
 #install the project in local maven repository 
 
-...
+```
 mvn install:install-file -Dfile=C:\ies\ies2024\lab01\prj1\target\prj1-1.0-SNAPSHOT.jar -DpomFile=C:\ies\ies2024\lab01\prj1\pom.xml       
-...
+```
 
 # local dependencies in maven projects
 
@@ -14,13 +14,13 @@ https://medium.com/javarevisited/how-do-i-add-a-project-as-a-dependency-of-anoth
   C:\Users\jfern\.m2\repository\ies\lab01\prj1\1.0-SNAPSHOT\prj1-1.0-SNAPSHOT.pom
 
 
-... 
+```
 <dependency>
 <groupId>ies.lab01</groupId>
 <artifactId>prj1</artifactId>
 <version>1.0-SNAPSHOT</version>
 </dependency>
-...
+```
 
 
 

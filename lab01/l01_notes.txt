@@ -1,0 +1,169 @@
+
+
+
+
+MUST
+https://medium.com/javarevisited/how-do-i-add-a-project-as-a-dependency-of-another-project-using-maven-4508283c01d1
+
+
+Guide to installing 3rd party JARs
+https://maven.apache.org/guides/mini/guide-3rd-party-jars-local.html
+
+Maven repository inside your project
+https://medium.com/@jakubtutko/maven-repository-inside-your-project-4c55b4d73be8
+
+
+see - https://sookocheff.com/post/java/local-maven-repository/
+
+
+
+
+=====================================================
+
+
+
+
+mvn archetype:generate -DgroupId=org.sonatype.mavenbook -DartifactId=project1 -Dpackage=ies.lab01 -Dversion=1.0-SNAPSHOT
+
+
+mvn archetype:generate -DgroupId=org.sonatype.mavenbook -DartifactId=project2 -Dpackage=ies.lab01 -Dversion=1.0-SNAPSHOT
+
+
+
+
+https://maven.apache.org/archetypes/maven-archetype-quickstart/
+
+mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4
+
+https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html
+
+mvn archetype:generate -DgroupId=ies.lab01 -DartifactId=l01_project1 -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
+
+
+........
+
+
+mvn org.apache.maven.plugins:maven-archetype-plugin:3.1.2:generate -DarchetypeArtifactId="maven-archetype-quickstart" -DarchetypeGroupId="org.apache.maven.archetypes" -DarchetypeVersion="1.4" -DgroupId="ies.lab01" -DartifactId="prj1"
+
+
+mvn org.apache.maven.plugins:maven-archetype-plugin:3.1.2:generate -DarchetypeArtifactId="maven-archetype-quickstart" -DarchetypeGroupId="org.apache.maven.archetypes" -DarchetypeVersion="1.4" -DgroupId="ies.lab01" -DartifactId="prj2"
+
+
+... Deployment failed: repository element was not specified in the POM inside 
+
+... ou should include the repository where you want to deploy in the distribution management section of the pom.xml.
+
+"you seem confused as to what "mvn deploy" actually does, it places an
+artifact in a repository, see:
+https://maven.apache.org/plugins/maven-deploy-plugin/
+if that is not what you want then using mvn install should suffice."
+
+https://maven.apache.org/plugins/maven-deploy-plugin/
+
+
+
+
+How to add local jar files to a Maven project?
+
+
+
+C:\ies\mvn_rep
+
+
+mvn deploy:deploy-file -Dfile=C:\ies\mvn_rep -DgroupId=ies.lab01
+
+...
+https://www.tutorialspoint.com/maven/maven_deployment_automation.htm
+
+https://www.educba.com/maven-deploy/
+
+......
+Guide to installing 3rd party JARs
+https://maven.apache.org/guides/mini/guide-3rd-party-jars-local.html
+
+
+
+If there's a pom-file as well, you can install it with the following command:
+
+mvn install:install-file -Dfile=<path-to-file> -DpomFile=<path-to-pomfile>
+
+
+With version 2.5 of the maven-install-plugin, it can get even simpler: if the JAR was built by Apache Maven, it'll contain a pom.xml in a subdirectory of the META-INF/ directory, which will be read by default. In that case, all you need to do is:
+
+mvn org.apache.maven.plugins:maven-install-plugin:2.5.2:install-file -Dfile=
+
+
+mvn org.apache.maven.plugins:maven-install-plugin:2.5.2:install-file -Dfile=C:\ies\ies2024\lab01\prj1\target\prj1-1.0-SNAPSHOT.jar 
+
+
+mvn install:install-file -Dfile=<path-to-file> -DpomFile=<path-to-pomfile>
+
+
+mvn install:install-file -Dfile=C:\ies\ies2024\lab01\prj1\target\prj1-1.0-SNAPSHOT.jar -DpomFile=C:\ies\ies2024\lab01\prj1\pom.xml
+
+
+
+
+
+
+........... time 
+
+
+
+
+http://www.java2s.com/Tutorials/Java/Java_Utilities/How_to_use_Java_Timer_and_TimerTask_to_schedule_a_task.htm#Schedule_a_task_that_executes_once_every_second
+
+.....
+https://devcenter.heroku.com/articles/local-maven-dependencies
+
+Maven can deploy the artifact for you using the mvn deploy:deploy-file goal:
+
+mvn deploy:deploy-file -Durl=file:///path/to/yourproject/repo/ -Dfile=mylib-1.0.jar -DgroupId=com.example -DartifactId=mylib -Dpackaging=jar -Dversion=1.0
+
+
+mvn deploy:deploy-file -Durl=file:"c:\\tmp\\repo" -Dfile=prj1-1.0-SNAPSHOT.jar -DgroupId=ies.lab01 -DartifactId=prj1 -Dpackaging=jar -Dversion=1.0
+
+
+
+
+
+Maven repository inside your project
+https://medium.com/@jakubtutko/maven-repository-inside-your-project-4c55b4d73be8
+
+
+... deploy
+mvn deploy:deploy-file -Durl=c:\tmp\repo -Dfile=prj1-1.0-SNAPSHOT.jar -DgroupId=ies.lab01 -DartifactId=prj1 -Dpackaging=jar -Dversion=1.0
+
+
+... install 
+
+mvn install:install-file   -Dfile=prj1-1.0-SNAPSHOT.jar    -DgroupId=ies.lab01   -DartifactId=prj1   -Dversion=1.0    -Dpackaging=jar    -DlocalRepositoryPath=c:\tmp\repo
+   
+   
+   
+   
+   file:///C:/Users/jack/desktop/list-of-items.txt
+   
+   
+   
+   
+   
+Where Is the Maven Local Repository?
+https://www.baeldung.com/maven-local-repository   
+
+
+
+
+https://medium.com/javarevisited/how-do-i-add-a-project-as-a-dependency-of-another-project-using-maven-4508283c01d1
+
+"When this program is built using the mvn clean install command, it will generate a .jar file that will be stored in the local maven repository(~/.m2)."
+
+ .. 
+  C:\Users\jfern\.m2\repository\ies\lab01\prj1\1.0-SNAPSHOT\prj1-1.0-SNAPSHOT.pom
+  
+  
+  <dependency>
+<groupId>ies.lab01</groupId>
+<artifactId>prj1</artifactId>
+<version>1.0-SNAPSHOT</version>
+</dependency>

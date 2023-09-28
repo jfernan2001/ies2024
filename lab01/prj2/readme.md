@@ -24,6 +24,24 @@ https://medium.com/javarevisited/how-do-i-add-a-project-as-a-dependency-of-anoth
 
 
 
+# Guide to installing 3rd party JARs
+
+https://maven.apache.org/guides/mini/guide-3rd-party-jars-local.html
+
+
+
+If there's a pom-file as well, you can install it with the following command:
+
+```
+mvn install:install-file -Dfile=<path-to-file> -DpomFile=<path-to-pomfile>
+```
+
+With version 2.5 of the maven-install-plugin, it can get even simpler: if the JAR was built by Apache Maven, it'll contain a pom.xml in a subdirectory of the META-INF/ directory, which will be read by default. In that case, all you need to do is:
+
+```
+mvn org.apache.maven.plugins:maven-install-plugin:2.5.2:install-file -Dfile=
+```
+
 
 # some links on maven 
 
@@ -40,14 +58,16 @@ Maven repository inside your project
 https://medium.com/@jakubtutko/maven-repository-inside-your-project-4c55b4d73be8
 
 deploy
-... 
+
+```
 mvn deploy:deploy-file -Durl=c:\tmp\repo -Dfile=prj1-1.0-SNAPSHOT.jar -DgroupId=ies.lab01 -DartifactId=prj1 -Dpackaging=jar -Dversion=1.0
-...
+```
 
 install 
-... 
+
+```
 mvn install:install-file   -Dfile=prj1-1.0-SNAPSHOT.jar    -DgroupId=ies.lab01   -DartifactId=prj1   -Dversion=1.0    -Dpackaging=jar    -DlocalRepositoryPath=c:\tmp\repo
-...
+```
 
 
 
